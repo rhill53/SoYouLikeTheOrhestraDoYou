@@ -92,3 +92,12 @@ part(bridge) .
 part(mouth_peice) .
 part(reed) .
 part(hole) .
+
+is_true(Question) :-
+  (
+    fact(Question) ->
+	  true;
+	  format('~w?~n', [Question]),
+	  Answer = read(yes),
+	  ( Answer -> assert(fact(Question)) )
+  ) .
