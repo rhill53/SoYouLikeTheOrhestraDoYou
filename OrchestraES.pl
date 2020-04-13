@@ -1,3 +1,9 @@
+{--
+CS3210 Spring 2020
+Programming assignment 3 - Expert System
+Nate Roberts and Robb Hill
+--}
+
 woodwind(flute) .
 woodwind(piccolo) .
 woodwind(alto_flute) .
