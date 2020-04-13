@@ -1,8 +1,8 @@
-{--
-CS3210 Spring 2020
-Programming assignment 3 - Expert System
-Nate Roberts and Robb Hill
---}
+%%%%%%%%%%%%%%%%%%%%
+% CS3210 Spring 2020
+% Programming assignment 3 - Expert System
+% Nate Roberts and Robb Hill
+%
 
 woodwind(flute) .
 woodwind(piccolo) .
@@ -106,6 +106,28 @@ is_true(Question) :-
 	  true;
 	  format('~w?~n', [Question]),
 	  Answer = read(yes),
-	  ( Answer -> assert(fact(Question)) )
-	  ( Answer == false -> assert(not(fact(Question))) )
+	  ( Answer -> assert(fact(Question)) );
+	  Answer == false -> check_facts()
   ) .
+  
+% TODO: write "check facts" for contrary facts
+% TODO: DRY
+
+% TODO: Dynamic clauses for writing of facts
+
+% TODO: retractall for session independence
+
+% TODO: program start with Ready and exits with Bye
+% TODO: program launches with begin in PL shell
+%		- also resets with begin
+
+% TODO: success and failure responses like nice or oh noes
+  
+  
+  
+  
+  
+  
+  
+  
+  
