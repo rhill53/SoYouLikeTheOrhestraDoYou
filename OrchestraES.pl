@@ -89,6 +89,7 @@ play(strum) .
 play(key) .
 play(strike) .
 play(bow) .
+play(drag) .
 play(hit) .
 play(wave) .
 
