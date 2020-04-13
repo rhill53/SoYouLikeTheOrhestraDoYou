@@ -106,4 +106,5 @@ is_true(Question) :-
 	  format('~w?~n', [Question]),
 	  Answer = read(yes),
 	  ( Answer -> assert(fact(Question)) )
+	  ( Answer == false -> assert(not(fact(Question))) )
   ) .
