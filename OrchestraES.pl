@@ -85,3 +85,10 @@ play(strike) .
 play(bow) .
 play(hit) .
 play(wave) .
+
+part(key) .
+part(string) .
+part(bridge) .
+part(mouth_peice) .
+part(reed) .
+part(hole) .
