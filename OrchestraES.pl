@@ -122,9 +122,9 @@ is_true(Question) :-
 %		- also resets with begin
 begin() :- (
   retractall(fact(X)),
-  format("Right now, I know nothing about the instrument you are thinking of.  Are you ready to be amazed?~n"),
+  format("Right now, I know nothing about the instrument about which you are thinking about.  Are you ready to be DAZZLED by my insight?~n"),
   ((read(yes) -> query); format("Oh... Oh I see."))
 ).
-query() :- (animal(Animal) -> format("I know!  It a ~w!~n", [Animal])).
+query() :- (instrument(I) -> format("You're thinking of a ~w!~n", [I])).
 
 % TODO: success and failure responses like nice or oh noes
