@@ -30,8 +30,8 @@ brass(trombone) .
 brass(alto_trombone) .
 brass(tenor_trombone) .
 brass(bass_trombone) .
-brass(contrabass trombone) .
-brass(tubas) .
+brass(contrabass_trombone) .
+brass(tuba) .
 brass(baritone) .
 brass(bariton_horn) .
 brass(euphonium) .
@@ -42,7 +42,7 @@ percussion(tenor_drum) .
 percussion(bass_drum) .
 percussion(cymbals) .
 percussion(triangle) .
-percussion(tam-tam) .
+percussion(tam_tam) .
 percussion(tamborine) .
 percussion(wood_block) .
 percussion(glockenspiel) .
@@ -58,7 +58,7 @@ percussion(drum_kit) .
 keyboard(piano) .
 keyboard(pipe_organ) .
 keyboard(harpsicord) .
-keyboard(accordian) .
+keyboard(accordion) .
 keyboard(celesta) .
 
 strings(violin) .
@@ -73,7 +73,7 @@ strings(harp) .
 strings(guitar) .
 strings(classical_guitar) .
 
-other(theramin) .
+other(theremin) .
 other(ondes_martenot) .
 other(electric_guitar) .
 other(electric_bass) .
@@ -96,7 +96,7 @@ play(wave) .
 part(key) .
 part(string) .
 part(bridge) .
-part(mouth_peice) .
+part(mouth_piece) .
 part(reed) .
 part(hole) .
 
@@ -109,7 +109,7 @@ is_true(Question) :-
 	  ( Answer -> assert(fact(Question)) );
 	  Answer == false -> check_facts()
   ) .
-  
+
 % TODO: write "check facts" for contrary facts
 % TODO: DRY
 
@@ -120,14 +120,11 @@ is_true(Question) :-
 % TODO: program start with Ready and exits with Bye
 % TODO: program launches with begin in PL shell
 %		- also resets with begin
+begin() :- (
+  retractall(fact(X)),
+  format("Right now, I know nothing about the instrument you are thinking of.  Are you ready to be amazed?~n"),
+  ((read(yes) -> query); format("Oh... Oh I see."))
+).
+query() :- (animal(Animal) -> format("I know!  It a ~w!~n", [Animal])).
 
 % TODO: success and failure responses like nice or oh noes
-  
-  
-  
-  
-  
-  
-  
-  
-  
