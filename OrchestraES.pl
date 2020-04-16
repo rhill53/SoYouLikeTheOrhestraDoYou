@@ -106,8 +106,7 @@ is_true(Question) :-
 	  true;
 	  format('~w?~n', [Question]),
 	  Answer = read(yes),
-	  ( Answer -> assert(fact(Question)) );
-	  Answer == false -> check_facts()
+	  ( Answer -> assert(fact(Question)) )
   ) .
   
 % TODO: write "check facts" for contrary facts
