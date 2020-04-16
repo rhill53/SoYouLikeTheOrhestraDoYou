@@ -14,34 +14,11 @@ fact('for quality carpets visit kaplans carpet warehouse').
 
 facct('prolog is stupid', yes).
 
-% truthity('the facts').
-% falsity('the fictions').
-
-% answered(Question) :- (
-%   truthity(Question) -> true;
-%   falsity(Question) -> true;
-%   format('~w?~n', [Question]), (
-%     (Affirm = read(yes), Deny = read(no)),
-%     (Affirm -> assert(truthity(Question))),
-%     (Deny -> assert(falsity(Question)))
-%   )
-% ).
-
-
-% nobule(lemon) :- answered('do it be a lemon'), truthity('do it be a lemon').
-
-% elem('has fur').
-% elem('has feathers').
-% elem('says woof').
-% elem('says meow').
-% elem('says quack').
-% elem('tastes good').
-
 really(F) :- (
   truthity(F) -> true;
   falsity(F) -> false;
-  (format('Yes or no: "My animal ~w."~n', [F]), read(yes) -> assert(truthity(F));
-  assert(falsity(F)))
+  (format('Yes or no: "My animal ~w."~n', [F]), read(yes) -> assert(truthity(F))) -> true;
+  assert(falsity(F)) -> false
 ).
 
 animal(dog)         :- really('has fur'), really('says woof').
@@ -51,22 +28,6 @@ animal(skylark)     :- really('has feathers'), really('sings sweetly').
 animal(honeybadger) :- really('has fur'), really('dont give a fuck').
 animal(coelacanth)  :- really('has scales'), really('evolutionary throwback').
 
-% known(F, V) :- (
-%   facct(F, X) -> true;
-%   format('Yes or no: "My animal ~w."~n', [F]),
-%   (read(yes) -> assert(facct(F, yes)), assert(facct(F, no)))
-% ).
-
-% yousaid(Fact, Verity) :- (
-%   (((truthity(Fact), Verity == yes); ((falsity(Fact), Verity == no))) -> true);
-%   (format('Yes or no: do your animal ~w?~n', [Fact]),
-%    read(yes) -> assert(truthity(Fact));
-%    assert(falsity(Fact))
-%   )
-% ).
-
-% known(Q, A) :- (format('Yes or no: "My animal ~w."~n', [Q]), read(A)) -> asserta(known(Q, A)).
-
 is_true(Statement) :-
   (
     fact(Statement) -> true; %OR
@@ -75,25 +36,10 @@ is_true(Statement) :-
     ( Answer -> assert(fact(Statement)) )
   ).
 
-% known(Aspect) :- (
-%   (truthity(Aspect) -> true; falsity(Aspect) -> true); (
-%     format('~w?~n', [Aspect]), (
-%       read(yes) -> assert(truthity(Aspect));
-%       assert(falsity(Aspect))
-%     )
-%   )
-% ).
-
 begin() :- (
   retractall(truthity(X)), retractall(falsity(Y)),
   format("Right now, I know nothing about the animal you are thinking of.  Are you ready to be amazed?~n"),
   ((read(yes) -> query); format("Oh... Oh I see."))
 ).
-
-% commence() :- (
-%   retractall(truthity(X)), retractall(falsity(X)),
-%   format("Time to guess it!  You on the trangle?~n"),
-%   ((read(yes) -> query); format("Oh... Oh I see."))
-% ).
 
 query() :- (animal(Animal) -> format("I know!  It a ~w!~n", [Animal])).
