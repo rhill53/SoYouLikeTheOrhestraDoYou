@@ -4,37 +4,37 @@
 % Nate Roberts and Robb Hill
 %
 
-woodwind(flute) .
-woodwind(piccolo) .
-woodwind(alto_flute) .
-woodwind(oboe) .
-woodwind(cor_anglais) .
-woodwind(bass_oboe) .
-woodwind(clarinet) .
-woodwind(b_flat_clarinet) .
-woodwind(e_flat_clarinet) .
-woodwind(basset_horn) .
-woodwind(bass_clarinet) .
-woodwind(contrabass_clarinet) .
-woodwind(bassoon) .
-woodwind(contrabossoon) .
-woodwind(saxaphone) .
+instrument(flute)					:- fact('is a woodwind'),	fact('has keys'),			fact('is played to the side').
+instrument(piccolo)					:- fact('is a woodwind'),	fact('has no keys') .
+instrument(oboe)					:- fact('is a woodwind'),	fact('has keys'),			fact('has a conical bore'),		fact('has a double reed') .
+instrument(clarinet)				:- fact('is a woodwind'),	fact('has keys'),			fact('has a conical bore'),		fact('has a single reed') .
+instrument(bassoo)					:- fact('is a woodwind'),	fact('has keys'),			fact('has no conical shap') .
+instrument(saxaphone)				:- fact('is a woodwind'),	fact('is made of brass') .
+% woodwind(contrabossoon) .
+% woodwind(b_flat_clarinet) .
+% woodwind(e_flat_clarinet) .
+% woodwind(basset_horn) .
+% woodwind(bass_clarinet) .
+% woodwind(contrabass_clarinet) .
+% woodwind(cor_anglais) .
+% woodwind(bass_oboe) .
+% woodwind(alto_flute) .
 
-brass(horn) .
-brass(wagner_tuba) .
-brass(trumpet) .
-brass(cornet) .
-brass(piccolo_trumpet) .
-brass(bass_trumpet) .
-brass(trombone) .
-brass(alto_trombone) .
-brass(tenor_trombone) .
-brass(bass_trombone) .
-brass(contrabass_trombone) .
-brass(tuba) .
-brass(baritone) .
-brass(bariton_horn) .
-brass(euphonium) .
+instrument(horn)					:- fact('is brass'),	fact('is wide at end'),	fact('has valves'),	fact('is tubes bent in circles') .
+instrument(trumpet)					:- fact('is brass'),	fact('is wide at end'), fact('has valves'),	fact('is tubes bent in ovals')
+instrument(trombone) 				:- fact('is brass'),	fact('is wide at end'),	fact('has slide') .
+instrument(tuba)					:- fact('is brass'),	fact('is wide at end'),	fact('has valves'), fact('end points up') .
+instrument(baritone) 				:- fact('is brass'),	fact('is wide at end'),	fact('has valves'), fact('end points up'), fact('is smaller than a tuba').
+% brass(wagner_tuba) .
+% brass(cornet) .
+% brass(piccolo_trumpet) .
+% brass(bass_trumpet) .
+% brass(alto_trombone) .
+% brass(tenor_trombone) .
+% brass(bass_trombone) .
+% brass(contrabass_trombone) .
+% brass(bariton_horn) .
+% brass(euphonium) .
 
 percussion(timpini) .
 percussion(snare_drum) .
