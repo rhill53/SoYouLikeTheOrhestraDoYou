@@ -36,17 +36,17 @@ instrument(tuba)					:- fact('is brass'),	fact('is wide at end'),	fact('has valv
 % brass(bariton_horn) .
 % brass(euphonium) .
 
-instrument(timpini) 			:- fact('is percussion'),	fact('has a strecched head'),	fact('has a metal body').
+instrument(timpini) 			:- fact('is percussion'),	fact('has a strecched head'),		fact('has a metal body').
 instrument(snare_drum) 			:- fact('is percussion'),	fact('has a strecched head'),		fact('has springs attached to head').
-instrument(bass_drum) 			:- fact('is percussion'),	fact('has a strecched head'), 		fact('struck with felt covered stick').
-instrument(cymbals) 			:- fact('is percussion'),	fact('is metal'),					fact('crashed together').
-instrument(triangle) 			:- fact('is percussion'),	fact('is metal'),					fact('has three sides').
 instrument(tamborine) 			:- fact('is percussion'),	fact('has a stretched head'),		fact('has paired metal discs all around edge').
+instrument(bass_drum) 			:- fact('is percussion'),	fact('has a strecched head'), 		fact('struck with felt covered stick').
+instrument(cymbals) 			:- fact('is percussion'),	fact('is metal'),					fact('are crashed together').
+instrument(triangle) 			:- fact('is percussion'),	fact('is metal'),					fact('has three sides').
+instrument(cow_bell)			:- fact('is percussion'),	fact('is metal'),					fact('has animal in name'),							fact('Christopher Walken needs more'),
+instrument(xylophone) 			:- fact('is percussion'),	fact('is metal'),					fact('has multiple sized bars').
+instrument(bells) 	 			:- fact('is percussion'),	fact('is metal'),					fact('has multiple sized tubes').
 instrument(wood_block) 			:- fact('is percussion'),	fact('is made entirely from wood').
-instrument(cow_bell)			:- fact('is percussion'),	fact('is metal'),	fact('has animal in name'),	fact('Christopher Walken needs more'),
-instrument(xylophone) 			:- fact('is percussion'),	fact('is metal'),	fact('has multiple sized bars').
-instrument(bells) 	 			:- fact('is percussion'),	fact('is metal'),	fact('has multiple sized tubes').
-instrument(drum_kit) 			:- fact('is percussion'),	fact('is a set or kit'),	fact('has multiple percussion instruments'),.
+instrument(drum_kit) 			:- fact('is percussion'),	fact('is a set or kit'),			fact('has multiple percussion instruments'),.
 % percussion(tenor_drum) .
 % percussion(tam_tam) .
 % percussion(glockenspiel) .
@@ -56,11 +56,11 @@ instrument(drum_kit) 			:- fact('is percussion'),	fact('is a set or kit'),	fact(
 % percussion(tubular_bells) .
 % percussion(mark_tree) .
 
-keyboard(piano) .
-keyboard(pipe_organ) .
-keyboard(harpsicord) .
-keyboard(accordion) .
-keyboard(celesta) .
+instrument(piano) 			:- fact('is a keyboard'),		fact('has strings'),	fact('mallets strike strings to play').
+instrument(harpsicord) 		:- fact('is a keyboard'),		fact('hss strings'),	fact('plucks strings to play').
+instrument(pipe_organ) 		:- fact('is a keyboard'),		fact('has pipes').
+instrument(accordion) 		:- fact('is a keyboard'),		fact('has bellows'),	fact('is pulled and pressed to play').
+% keyboard(celesta) .
 
 strings(violin) .
 strings(first_violin) .
