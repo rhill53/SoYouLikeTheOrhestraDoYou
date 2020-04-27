@@ -42,11 +42,11 @@ instrument(tamborine) 			:- fact('is a percussion instrument'),	fact('has a stre
 instrument(bass_drum) 			:- fact('is a percussion instrument'),	fact('has a strecched head'), 		fact('struck with felt covered stick').
 instrument(cymbals) 			:- fact('is a percussion instrument'),	fact('is metal'),					fact('are crashed together').
 instrument(triangle) 			:- fact('is a percussion instrument'),	fact('is metal'),					fact('has three sides').
-instrument(cow_bell)			:- fact('is a percussion instrument'),	fact('is metal'),					fact('has animal in name'),							fact('Christopher Walken needs more'),
+instrument(cow_bell)			:- fact('is a percussion instrument'),	fact('is metal'),					fact('has animal in name'),							fact('Christopher Walken needs more').
 instrument(xylophone) 			:- fact('is a percussion instrument'),	fact('is metal'),					fact('has multiple sized bars').
 instrument(bells) 	 			:- fact('is a percussion instrument'),	fact('is metal'),					fact('has multiple sized tubes').
 instrument(wood_block) 			:- fact('is a percussion instrument'),	fact('is made entirely from wood').
-instrument(drum_kit) 			:- fact('is a percussion instrument'),	fact('is a set or kit'),			fact('has multiple percussion instruments'),.
+instrument(drum_kit) 			:- fact('is a percussion instrument'),	fact('is a set or kit'),			fact('has multiple percussion instruments').
 % percussion(tenor_drum) .
 % percussion(tam_tam) .
 % percussion(glockenspiel) .
@@ -64,9 +64,9 @@ instrument(accordion) 		:- fact('is a keyboard instrument'),		fact('has bellows'
 
 instrument(violin) 			:- fact('is a stringed instrument'),		fact('played with a bow'),			fact('is played from shoulder'),	fact('is smaller than viola').
 instrument(viola) 			:- fact('is a stringed instrument'),		fact('played with a bow'),			fact('is played from shoulder').
-instrument(bass) 			:- fact('is a stringed instrument'),		fact('played with a bow'),			fact('is played upright'),	fact('is larger than cello'),.
+instrument(bass) 			:- fact('is a stringed instrument'),		fact('played with a bow'),			fact('is played upright'),	fact('is larger than cello').
 instrument(cello) 			:- fact('is a stringed instrument'),		fact('played with a bow'),			fact('is played upright').
-instrument(guitar) 			:- fact('is a stringed instrument'),		fact('is plucked of strummed'),		fact('has a finger/fret board'),.
+instrument(guitar) 			:- fact('is a stringed instrument'),		fact('is plucked of strummed'),		fact('has a finger/fret board').
 instrument(harp) 			:- fact('is a stringed instrument'),		fact('is plucked or strummed').
 % strings(first_violin) .
 % strings(second_violin) .
