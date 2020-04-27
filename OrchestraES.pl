@@ -22,9 +22,9 @@ instrument(piccolo)					:- fact('is a woodwind instrument'),	fact('has no keys')
 
 instrument(horn)					:- fact('is a brass instrument'),	fact('is wide at end'),	fact('has valves'),	fact('is tubes bent in circles').
 instrument(trumpet)					:- fact('is a brass instrument'),	fact('is wide at end'), fact('has valves'),	fact('is tubes bent in ovals').
-instrument(trombone) 				:- fact('is a brass instrument'),	fact('is wide at end'),	fact('has slide').
 instrument(baritone) 				:- fact('is a brass instrument'),	fact('is wide at end'),	fact('has valves'), fact('end points up'), fact('is smaller than a tuba').
 instrument(tuba)					:- fact('is a brass instrument'),	fact('is wide at end'),	fact('has valves'), fact('end points up').
+instrument(trombone) 				:- fact('is a brass instrument'),	fact('is wide at end'),	fact('has slide').
 % brass(wagner_tuba) .
 % brass(cornet) .
 % brass(piccolo_trumpet) .
