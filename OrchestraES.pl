@@ -62,12 +62,12 @@ instrument(pipe_organ) 		:- fact('is a keyboard instrument'),		fact('has pipes')
 instrument(accordion) 		:- fact('is a keyboard instrument'),		fact('has bellows'),	fact('is pulled and pressed to play').
 % keyboard(celesta) .
 
-instrument(violin) 			:- fact('is a stringed instrument'),		fact('played with a bow'),	fact('is played from shoulder'),	fact('is smaller than viola').
-instrument(viola) 			:- fact('is a stringed instrument'),		fact('played with a bow'),	fact('is played from shoulder').
-instrument(bass) 				:- fact('is a stringed instrument'),		fact('played with a bow'),	fact('is played upright'),	fact('is larger than cello'),.
-instrument(cello) 				:- fact('is a stringed instrument'),		fact('played with a bow'),	fact('is played upright').
+instrument(violin) 			:- fact('is a stringed instrument'),		fact('played with a bow'),			fact('is played from shoulder'),	fact('is smaller than viola').
+instrument(viola) 			:- fact('is a stringed instrument'),		fact('played with a bow'),			fact('is played from shoulder').
+instrument(bass) 			:- fact('is a stringed instrument'),		fact('played with a bow'),			fact('is played upright'),	fact('is larger than cello'),.
+instrument(cello) 			:- fact('is a stringed instrument'),		fact('played with a bow'),			fact('is played upright').
 instrument(guitar) 			:- fact('is a stringed instrument'),		fact('is plucked of strummed'),		fact('has a finger/fret board'),.
-instrument(harp) 				:- fact('is a stringed instrument'),		fact('is plucked or strummed').
+instrument(harp) 			:- fact('is a stringed instrument'),		fact('is plucked or strummed').
 % strings(first_violin) .
 % strings(second_violin) .
 % strings(upright_bass) .
