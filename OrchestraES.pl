@@ -4,12 +4,12 @@
 % Nate Roberts and Robb Hill
 %
 
+instrument(oboe)					:- fact('is a woodwind'),	fact('has keys'),			fact('has a conical bore'),		fact('has a double reed').
+instrument(clarinet)				:- fact('is a woodwind'),	fact('has keys'),			fact('has a conical bore'),		fact('has a single reed').
+instrument(bassoo)					:- fact('is a woodwind'),	fact('has keys'),			fact('has no conical shape').
 instrument(flute)					:- fact('is a woodwind'),	fact('has keys'),			fact('is played to the side').
-instrument(piccolo)					:- fact('is a woodwind'),	fact('has no keys') .
-instrument(oboe)					:- fact('is a woodwind'),	fact('has keys'),			fact('has a conical bore'),		fact('has a double reed') .
-instrument(clarinet)				:- fact('is a woodwind'),	fact('has keys'),			fact('has a conical bore'),		fact('has a single reed') .
-instrument(bassoo)					:- fact('is a woodwind'),	fact('has keys'),			fact('has no conical shap') .
-instrument(saxaphone)				:- fact('is a woodwind'),	fact('is made of brass') .
+instrument(saxaphone)				:- fact('is a woodwind'),	fact('is made of brass').
+instrument(piccolo)					:- fact('is a woodwind'),	fact('has no keys').
 % woodwind(contrabossoon) .
 % woodwind(b_flat_clarinet) .
 % woodwind(e_flat_clarinet) .
@@ -20,11 +20,11 @@ instrument(saxaphone)				:- fact('is a woodwind'),	fact('is made of brass') .
 % woodwind(bass_oboe) .
 % woodwind(alto_flute) .
 
-instrument(horn)					:- fact('is brass'),	fact('is wide at end'),	fact('has valves'),	fact('is tubes bent in circles') .
-instrument(trumpet)					:- fact('is brass'),	fact('is wide at end'), fact('has valves'),	fact('is tubes bent in ovals')
-instrument(trombone) 				:- fact('is brass'),	fact('is wide at end'),	fact('has slide') .
-instrument(tuba)					:- fact('is brass'),	fact('is wide at end'),	fact('has valves'), fact('end points up') .
+instrument(horn)					:- fact('is brass'),	fact('is wide at end'),	fact('has valves'),	fact('is tubes bent in circles').
+instrument(trumpet)					:- fact('is brass'),	fact('is wide at end'), fact('has valves'),	fact('is tubes bent in ovals').
+instrument(trombone) 				:- fact('is brass'),	fact('is wide at end'),	fact('has slide').
 instrument(baritone) 				:- fact('is brass'),	fact('is wide at end'),	fact('has valves'), fact('end points up'), fact('is smaller than a tuba').
+instrument(tuba)					:- fact('is brass'),	fact('is wide at end'),	fact('has valves'), fact('end points up').
 % brass(wagner_tuba) .
 % brass(cornet) .
 % brass(piccolo_trumpet) .
@@ -36,24 +36,25 @@ instrument(baritone) 				:- fact('is brass'),	fact('is wide at end'),	fact('has 
 % brass(bariton_horn) .
 % brass(euphonium) .
 
-percussion(timpini) .
-percussion(snare_drum) .
-percussion(tenor_drum) .
-percussion(bass_drum) .
-percussion(cymbals) .
-percussion(triangle) .
-percussion(tam_tam) .
-percussion(tamborine) .
-percussion(wood_block) .
-percussion(glockenspiel) .
-percussion(xylophone) .
-percussion(vibraphone) .
-percussion(marimba) .
-percussion(crotales) .
-percussion(bells) .
-percussion(tubular_bells) .
-percussion(mark_tree) .
-percussion(drum_kit) .
+instrument(timpini) 			:- fact('is percussion'),	fact('has a strecched head'),	fact('has a metal body').
+instrument(snare_drum) 			:- fact('is percussion'),	fact('has a strecched head'),		fact('has springs attached to head').
+instrument(bass_drum) 			:- fact('is percussion'),	fact('has a strecched head'), 		fact('struck with felt covered stick').
+instrument(cymbals) 			:- fact('is percussion'),	fact('is metal'),					fact('crashed together').
+instrument(triangle) 			:- fact('is percussion'),	fact('is metal'),					fact('has three sides').
+instrument(tamborine) 			:- fact('is percussion'),	fact('has a stretched head'),		fact('has paired metal discs all around edge').
+instrument(wood_block) 			:- fact('is percussion'),	fact('is made entirely from wood').
+instrument(cow_bell)			:- fact('is percussion'),	fact('is metal'),	fact('has animal in name'),	fact('Christopher Walken needs more'),
+instrument(xylophone) 			:- fact('is percussion'),	fact('is metal'),	fact('has multiple sized bars').
+instrument(bells) 	 			:- fact('is percussion'),	fact('is metal'),	fact('has multiple sized tubes').
+instrument(drum_kit) 			:- fact('is percussion'),	fact('is a set or kit'),	fact('has multiple percussion instruments'),.
+% percussion(tenor_drum) .
+% percussion(tam_tam) .
+% percussion(glockenspiel) .
+% percussion(vibraphone) .
+% percussion(marimba) .
+% percussion(crotales) .
+% percussion(tubular_bells) .
+% percussion(mark_tree) .
 
 keyboard(piano) .
 keyboard(pipe_organ) .
