@@ -18,7 +18,7 @@ instrument(oboe)      :- fact('is a woodwind instrument'), fact('has keys'), fac
 instrument(clarinet)  :- fact('is a woodwind instrument'), fact('has keys'), fact('has a conical bore'), fact('has a single reed').
 instrument(bassoo)    :- fact('is a woodwind instrument'), fact('has keys'), fact('has no conical shape').
 instrument(flute)     :- fact('is a woodwind instrument'), fact('has keys'), fact('is played to the side').
-instrument(saxophone) :- fact('is a woodwind instrument'), fact('is made of brass').
+instrument(saxophone) :- fact('is a woodwind instrument'), fact('has keys'), fact('is made of brass').
 instrument(piccolo)   :- fact('is a woodwind instrument'), not(fact('has keys')).
 % woodwind(contrabossoon) .
 % woodwind(b_flat_clarinet) .
@@ -46,6 +46,7 @@ instrument(trombone) :- fact('is a brass instrument'), fact('is wide at end'), f
 % brass(bariton_horn) .
 % brass(euphonium) .
 
+instrument(drum_kit)   :- fact('is a percussion instrument'), fact('is a set or kit'),      fact('has multiple percussion instruments').
 instrument(timpani)    :- fact('is a percussion instrument'), fact('has a stretched head'), fact('has a metal body').
 instrument(snare_drum) :- fact('is a percussion instrument'), fact('has a stretched head'), fact('has springs attached to head').
 instrument(tamborine)  :- fact('is a percussion instrument'), fact('has a stretched head'), fact('has paired metal discs all around edge').
@@ -56,7 +57,7 @@ instrument(cow_bell)   :- fact('is a percussion instrument'), fact('is metal'), 
 instrument(xylophone)  :- fact('is a percussion instrument'), fact('is metal'),             fact('has multiple sized bars').
 instrument(bells)      :- fact('is a percussion instrument'), fact('is metal'),             fact('has multiple sized tubes').
 instrument(wood_block) :- fact('is a percussion instrument'), fact('is made entirely from wood').
-instrument(drum_kit)   :- fact('is a percussion instrument'), fact('is a set or kit'),      fact('has multiple percussion instruments').
+
 % percussion(tenor_drum) .
 % percussion(tam_tam) .
 % percussion(glockenspiel) .
@@ -83,33 +84,6 @@ instrument(harp)   :- fact('is a stringed instrument'), fact('is plucked or stru
 % strings(upright_bass) .
 % strings(double_bass) .
 % strings(classical_guitar) .
-
-% other(theremin) .
-% other(ondes_martenot) .
-% other(electric_guitar) .
-% other(electric_bass) .
-% other(hammond_organ) .
-% other(lowrey_organ) .
-% other(ring_modulators) .
-% other(synthesizer) .
-% other(novachord) .
-
-% play(pluck) .
-% play(blow) .
-% play(strum) .
-% play(key) .
-% play(strike) .
-% play(bow) .
-% play(drag) .
-% play(hit) .
-% play(wave) .
-
-% part(key) .
-% part(string) .
-% part(bridge) .
-% part(mouth_piece) .
-% part(reed) .
-% part(hole) .
 
 begin() :- (
   retractall(truthity(_)), retractall(falsity(_)),
